@@ -1,0 +1,57 @@
+.block_assignments_overview #mycoursestree {
+    margin-top: 3%;
+}
+
+.block_assignments_overview #mycoursestree > li {
+    margin: 2%;
+}
+
+.block_assignments_overview #mycoursestree li {
+    margin: 1%;
+}
+
+.block_assignments_overview .course_status_img {
+    margin-left: 4%;
+}
+
+.block_assignments_overview .assignments_quick_count {
+    font-size: small;
+    position: relative;
+    right: 8%;
+    margin-bottom: 1%;
+}
+
+.block_assignments_overview .tree-parent[aria-expanded='true'] > img {
+    display: none;
+}
+
+.block_assignments_overview .assignment_status_img {
+    height: 8px;
+    width: 8px;
+    vertical-align: middle;
+    margin: 3%;
+
+}
+
+.block_assignments_overview [aria-expanded="false"] > [role="group"] {
+    display: none;
+}
+
+.block_assignments_overview .courses_ul > li,
+.block_assignments_overview .assignments_ul > li {
+    list-style-image: url('[[pix:t/collapsed]]');
+}
+
+.block_assignments_overview .assignment_details_ul > li {
+    list-style: square;
+}
+
+.block_assignments_overview .courses_ul > li[aria-expanded="true"],
+.block_assignments_overview .assignments_ul > li[aria-expanded="true"] {
+    list-style-image: url('[[pix:t/expanded]]');
+}
+
+.block_assignments_overview .courses_ul > li[aria-expanded="true"] > a,
+.block_assignments_overview .assignments_ul > li[aria-expanded="true"] > a {
+    font-weight: bold;
+}
