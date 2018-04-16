@@ -13,19 +13,50 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-include_once("../config.php");
+
+/**
+ * Assignments overview block caps.
+ *
+ * @package   block_assignments_overview
+ * @copyright 2018 Tanmay Gatle Manasi Ladkat
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+require_once("../config.php");
+require_login();
+
+/**
+ * Assignments overview block class
+ *
+ * Used to produce list of assignments as submitted, not submitted or graded.
+ *
+ * @package   block_assignments_overview
+ * @copyright 2018 Tanmay Gatle Manasi Ladkat
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class block_assignments_overview extends block_base
 {
 
+    /**
+     * Set the initial properties for the block
+     */
     public function init() {
         $this->blockname = get_class($this);
         $this->title = get_string('assignments_overview', $this->blockname);
     }
 
-    function get_required_javascript() {
+    /**
+     * Gets Javascript that may be required for navigation
+     */
+    public function get_required_javascript() {
         $this->page->requires->js_call_amd('block_assignments_overview/assignments_overviewblock', 'init');
     }
 
+    /**
+     * Gets the content for this block by grabbing it from $this->page
+     *
+     * @return object $this->content
+     */
     public function get_content() {
         global $DB, $USER;
 

@@ -13,10 +13,21 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-include_once("../config.php");
+
+/**
+ * Version Details
+ *
+ * @package   block_assignments_overview
+ * @copyright 2018 Tanmay Gatle Manasi Ladkat
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+require_once("../config.php");
+require_login();
 $plugin->component = 'block_assignments_overview';  // Recommended since 2.0.2 (MDL-26035). Required since 3.0 (MDL-48494).
-$plugin->version = 2018041614;  // YYYYMMDDHH (year, month, day, 24-hr time).
+$plugin->version = 2018041701;  // YYYYMMDDHH (year, month, day, 24-hr time).
 $plugin->requires = 2010112400; // YYYYMMDDHH (This is the release version for Moodle 2.0).
-$plugin->release = 'v4';
+$plugin->release = 'v9';
+$plugin->maturity  = MATURITY_STABLE;
 
 

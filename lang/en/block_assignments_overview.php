@@ -14,6 +14,14 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Strings for component 'block_assignments_overview', language 'en'
+ *
+ * @package   block_assignments_overview
+ * @copyright 2018 Tanmay Gatle Manasi Ladkat
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 $string['mycourses'] = '{$a}\'s Courses';
 $string['nocourses'] = 'You have not enrolled in any courses';
 $string['noassignments'] = 'You have no assignments';
